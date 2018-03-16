@@ -1,0 +1,53 @@
+<f:layout name="default" />
+
+<f:section name="main">
+
+<f:flashMessages />
+
+<div id="tx-ncusefulpages-rate-forms">
+    <div class="heading"><f:translate key="Page.index.rateThisPage" /></div>
+    <f:form method="post" action="rate" class="tx-ncusefulpages-rate-form-useful" additionalParams="{thirdPartyParameters}">
+        <f:form.hidden name="pageID" value="{pageID}" />
+        <f:form.hidden name="pageTitle" value="{pageTitle}" class="Tx_NcUsefulpages_Domain_Model_Page.pageTitle" />
+        <f:form.hidden name="pageURL" value="{pageURL}" />
+        <f:form.hidden name="rating" value="{ratingUseful}" />
+        <p class="robotic" id="honeypot-ratingUseful">
+            <label for="robotest-ratingUseful">If you're human leave this blank:</label>
+            <input name="robotest" type="text" id="robotest-ratingUseful" class="robotest" />
+        </p>
+        <f:form.submit name="useful" value="{f:translate(key: 'Page.index.useful')}" class="useful-link useful-button" />
+    </f:form>
+    <f:form method="post" action="rate" class="tx-ncusefulpages-rate-form-notUseful" additionalParams="{thirdPartyParameters}">
+        <f:form.hidden name="pageID" value="{pageID}" />
+        <f:form.hidden name="pageTitle" value="{pageTitle}" class="Tx_NcUsefulpages_Domain_Model_Page.pageTitle" />
+        <f:form.hidden name="pageURL" value="{pageURL}" />
+        <f:form.hidden name="rating" value="{ratingNotUseful}" />
+        <p class="robotic" id="honeypot-ratingNotUseful">
+            <label for="robotest-ratingNotUseful">If you're human leave this blank:</label>
+            <input name="robotest" type="text" id="robotest-ratingNotUseful" class="robotest" />
+        </p>
+        <f:form.submit name="notUseful" value="{f:translate(key:'Page.index.notUseful')}" class="notUseful-link useful-button" />
+    </f:form>
+    <f:form method="post" action="rate" class="tx-ncusefulpages-rate-form-undecided" additionalParams="{thirdPartyParameters}">
+        <f:form.hidden name="pageID" value="{pageID}" />
+        <f:form.hidden name="pageTitle" value="{pageTitle}" class="Tx_NcUsefulpages_Domain_Model_Page.pageTitle" />
+        <f:form.hidden name="pageURL" value="{pageURL}" />
+        <f:form.hidden name="rating" value="{ratingUndecided}" />
+        <p class="robotic" id="honeypot-ratingUndecided">
+            <label for="robotest-ratingUndecided">If you're human leave this blank:</label>
+            <input name="robotest" type="text" id="robotest-ratingUndecided" class="robotest" />
+        </p>
+        <f:form.submit name="undecided" value="{f:translate(key:'Page.index.undecided')}" class="undecided-link" />
+    </f:form>
+
+    <script type="text/javascript">
+        // Fetch a more sophisticated version of the page title, e.g. - depending on page configuration - with website title
+        // or rootLine page titles, which are not available through \TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController.
+        var titleHiddenInputElements = document.getElementsByClassName('Tx_NcUsefulpages_Domain_Model_Page.pageTitle');
+        for(var i = 0; i < titleHiddenInputElements.length; i++) {
+            titleHiddenInputElements[i].value = document.title;
+        }
+    </script>
+</div>
+
+</f:section>

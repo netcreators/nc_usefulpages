@@ -1,0 +1,20 @@
+<f:layout name="default" />
+
+<f:section name="main">
+
+    <f:flashMessages />
+
+    <f:if condition="{showCommentForm}">
+        <f:then>
+            <f:render partial="CommentForm" arguments="{object: newComment, objectName: 'newComment', page: page, rating: rating, thirdPartyParameters: thirdPartyParameters, ratingAsLowerCamelCaseString: ratingAsLowerCamelCaseString}" />
+        </f:then>
+        <f:else>
+            <p>
+                <f:translate key="Page.rate.thankYouForRating"/>
+            </p>
+        </f:else>
+    </f:if>
+
+    <f:render partial="NavigationLinks" arguments="{showContactLink: showContactLink, page: page}" />
+
+</f:section>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'nc_usefulpages'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="en" type="array">
+			<label index="tx_ncusefulpages_domain_model_page">Page Rating (Useful Pages)</label>
+			<label index="tx_ncusefulpages_domain_model_page.page_i_d">ID of the page being rated</label>
+            <label index="tx_ncusefulpages_domain_model_page.page_u_r_l">URL of the page being rated</label>
+			<label index="tx_ncusefulpages_domain_model_page.page_title">Title of the page being rated</label>
+            <label index="tx_ncusefulpages_domain_model_page.page_parameters">Parameters of plugins shown on the page</label>
+			<label index="tx_ncusefulpages_domain_model_page.useful">Useful</label>
+			<label index="tx_ncusefulpages_domain_model_page.notUseful">Not useful</label>
+            <label index="tx_ncusefulpages_domain_model_page.undecided">Undecided</label>
+			<label index="tx_ncusefulpages_domain_model_page.comments">Comments</label>
+
+			<label index="tx_ncusefulpages_domain_model_comment">Comment (Useful Pages)</label>
+            <label index="tx_ncusefulpages_domain_model_comment.rating">Rating</label>
+			<label index="tx_ncusefulpages_domain_model_comment.content">Content</label>
+            <label index="tx_ncusefulpages_domain_model_comment.author_name">The author's name</label>
+            <label index="tx_ncusefulpages_domain_model_comment.author_email">The author's e-mail address</label>
+		</languageKey>
+        <languageKey index="default" type="array">
+            <label index="tx_ncusefulpages_domain_model_page">Beoordeelde pagina (Useful Pages)</label>
+            <label index="tx_ncusefulpages_domain_model_page.page_i_d">Pagina ID</label>
+            <label index="tx_ncusefulpages_domain_model_page.page_u_r_l">Pagina URL</label>
+            <label index="tx_ncusefulpages_domain_model_page.page_title">Pagina titel</label>
+            <label index="tx_ncusefulpages_domain_model_page.page_parameters">Pagina plugin parameters</label>
+            <label index="tx_ncusefulpages_domain_model_page.useful">Nuttig</label>
+            <label index="tx_ncusefulpages_domain_model_page.notUseful">Niet nuttig</label>
+            <label index="tx_ncusefulpages_domain_model_page.undecided">Onbeslist</label>
+            <label index="tx_ncusefulpages_domain_model_page.comments">Commentaren</label>
+
+            <label index="tx_ncusefulpages_domain_model_comment">Commentaar (Useful Pages)</label>
+            <label index="tx_ncusefulpages_domain_model_comment.rating">Beoordeling</label>
+            <label index="tx_ncusefulpages_domain_model_comment.content">Inhoud</label>
+            <label index="tx_ncusefulpages_domain_model_comment.author_name">De naam van de auteur</label>
+            <label index="tx_ncusefulpages_domain_model_comment.author_email">De e-mail adres van de auteur</label>
+        </languageKey>
+	</data>
+</T3locallang>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for the Useful Pages extension in the FRONTEND</description>
+	</meta>
+	<data type="array">
+		<languageKey index="en" type="array">
+			<label index="Page.index.rateThisPage">Rate this page</label>
+			<label index="Page.index.useful">Useful</label>
+			<label index="Page.index.notUseful">Not useful</label>
+            <label index="Page.index.undecided">This is not what I was looking for</label>
+			<label index="Page.rate.thankYouForRating">Thank you for rating this page.</label>
+            <label index="Page.rate.addComment.notUseful">What was unclear or could be improved?</label>
+            <label index="Page.rate.addComment.undecided">What were you looking for?</label>
+			<label index="Page.rate.goBack">Go one step back</label>
+			<label index="Page.rate.askAnEmployee">Directly ask one of our employees</label>
+
+            <label index="Comment.form.submit">Send</label>
+            <label index="Comment.form.contactDataOptional">If you would like to receive a reaction from us, please also enter your name and e-mail address.</label>
+            <label index="Comment.form.authorName">Name</label>
+            <label index="Comment.form.authorEmail">E-Mail</label>
+
+            <label index="Rating">Rating</label>
+            <label index="Rating.useful">Useful</label>
+            <label index="Rating.notUseful">Not useful</label>
+            <label index="Rating.undecided">Undecided</label>
+
+            <label index="flashMessage.Comment.created.title">Comment sent</label>
+            <label index="flashMessage.Comment.created">Your comment has been sent!</label>
+
+            <label index="error.errorsOccurred">Following errors occurred:</label>
+
+			<label index="error.Page.indexAction">Could not render page rating widget.</label>
+			<label index="error.Page.rateAction">Could not rate the page.</label>
+
+            <label index="error.Comment.createAction">Could not create your comment.</label>
+
+			<label index="error.code.1221560718">The &lt;strong&gt;%s&lt;/strong&gt; field must not be empty!</label>
+		</languageKey>
+		<languageKey index="default" type="array">
+			<label index="Page.index.rateThisPage">Beoordeel deze pagina</label>
+			<label index="Page.index.useful">Ja</label>
+			<label index="Page.index.notUseful">Nee</label>
+            <label index="Page.index.undecided">Dit is niet wat ik zocht</label>
+			<label index="Page.rate.thankYouForRating">Bedankt voor uw input.</label>
+            <label index="Page.rate.addComment.notUseful">Wat was er onduidelijk of kan naar uw mening verbeterd worden?</label>
+            <label index="Page.rate.addComment.undecided">Welke informatie zocht je?</label>
+			<label index="Page.rate.goBack">Ga een stap terug</label>
+			<label index="Page.rate.askAnEmployee">Stel je vraag aan een medewerker</label>
+
+            <label index="Comment.form.submit">Versturen</label>
+            <label index="Comment.form.contactDataOptional">Indien u een reactie wilt ontvangen graag uw naam en e-mailadres invullen.</label>
+            <label index="Comment.form.authorName">Uw naam</label>
+            <label index="Comment.form.authorEmail">Uw e-mail adres</label>
+
+            <label index="Rating">Beoordeling</label>
+            <label index="Rating.useful">Nuttig</label>
+            <label index="Rating.notUseful">Niet nuttig</label>
+            <label index="Rating.undecided">Onbeslist</label>
+
+            <label index="flashMessage.Comment.created.title">Opmerking verzonden</label>
+            <label index="flashMessage.Comment.created">Uw reactie is aan onze medewerkers verzonden.</label>
+
+            <label index="error.errorsOccurred">Er zijn volgende fouten:</label>
+
+            <label index="error.Page.indexAction">Kon de widget voor pagina beoordeling niet weergegeven.</label>
+            <label index="error.Page.rateAction">Kon u beoordeling over deze pagina niet opslaan.</label>
+
+            <label index="error.Comment.createAction">Kon je reactie niet opslaan.</label>
+
+            <label index="error.code.1221560718">De &lt;strong&gt;%s&lt;/strong&gt; veld mag niet leeg zijn!</label>
+		</languageKey>
+        <languageKey index="fr" type="array">
+            <label index="Page.index.rateThisPage">Noter cette page</label>
+            <label index="Page.index.useful">Utile</label>
+            <label index="Page.index.notUseful">Pas utile</label>
+            <label index="Page.index.undecided">Ce n'est pas ce que je cherchais</label>
+            <label index="Page.rate.thankYouForRating">Merci d'avoir noté cette page</label>
+            <label index="Page.rate.addComment.notUseful">Ce qui était clair ou pourrait être amélioré?</label>
+            <label index="Page.rate.addComment.undecided">Qu'est-ce que vous cherchez?</label>
+            <label index="Page.rate.goBack">Fr Go one step back</label>
+            <label index="Page.rate.askAnEmployee">Demander directement l'un de nos employés</label>
+
+            <label index="Comment.form.submit">Envoyer</label>
+            <label index="Comment.form.contactDataOptional">Si vous souhaitez recevoir une réaction de notre part, s'il vous plaît entrer également votre nom et votre adresse email</label>
+            <label index="Comment.form.authorName">Nom</label>
+            <label index="Comment.form.authorEmail">E-Mail</label>
+
+            <label index="Rating">Fr Rating</label>
+            <label index="Rating.useful">Fr Useful</label>
+            <label index="Rating.notUseful">Fr Not useful</label>
+            <label index="Rating.undecided">Fr Undecided</label>
+
+            <label index="flashMessage.Comment.created.title">Commentaire a été envoyé</label>
+            <label index="flashMessage.Comment.created">Votre commentaire a été envoyé</label>
+
+            <label index="error.errorsOccurred">Following errors occurred:</label>
+
+            <label index="error.Page.indexAction">Could not render page rating widget.</label>
+            <label index="error.Page.rateAction">Could not rate the page.</label>
+
+            <label index="error.Comment.createAction">Impossible de créer votre commentaire</label>
+
+            <label index="error.code.1221560718">The &lt;strong&gt;%s&lt;/strong&gt; field must not be empty!</label>
+        </languageKey>
+        <languageKey index="de" type="array">
+            <label index="Page.index.rateThisPage">Bewerten sie die seite</label>
+            <label index="Page.index.useful">Nützlich</label>
+            <label index="Page.index.notUseful">Nicht nützlich</label>
+            <label index="Page.index.undecided">Dies ist nicht das, was ich gesucht habe</label>
+            <label index="Page.rate.thankYouForRating">Vielen Dank für die Bewertung dieses Seite</label>
+            <label index="Page.rate.addComment.notUseful">Was war unklar oder könnte verbessert werden?</label>
+            <label index="Page.rate.addComment.undecided">Was haben Sie gesucht?</label>
+            <label index="Page.rate.goBack">De Go one step back</label>
+            <label index="Page.rate.askAnEmployee">Direkt fragen Sie einen unserer Mitarbeiter</label>
+
+            <label index="Comment.form.submit">Abschicken</label>
+            <label index="Comment.form.contactDataOptional">Wenn Sie möchten, um eine Reaktion von uns erhalten, geben Sie bitte auch Ihren Namen und Ihre E-Mail-Adresse</label>
+            <label index="Comment.form.authorName">Name</label>
+            <label index="Comment.form.authorEmail">E-Mail</label>
+
+            <label index="Rating">De Rating</label>
+            <label index="Rating.useful">De Useful</label>
+            <label index="Rating.notUseful">De Not useful</label>
+            <label index="Rating.undecided">De Undecided</label>
+
+            <label index="flashMessage.Comment.created.title">Kommentar abgeschickt</label>
+            <label index="flashMessage.Comment.created">Ihr Kommentar wurde abgeschickt</label>
+
+            <label index="error.errorsOccurred">Following errors occurred:</label>
+
+            <label index="error.Page.indexAction">Could not render page rating widget.</label>
+            <label index="error.Page.rateAction">Could not rate the page.</label>
+
+            <label index="error.Comment.createAction">Konnte Ihren Kommentar nicht erstellen</label>
+
+            <label index="error.code.1221560718">The &lt;strong&gt;%s&lt;/strong&gt; field must not be empty!</label>
+        </languageKey>
+	</data>
+</T3locallang>

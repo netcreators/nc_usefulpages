@@ -1,0 +1,76 @@
+plugin.tx_ncusefulpages {
+	settings {
+
+		// Settings related to what is shown after the user rated.
+		Page.rated {
+
+			// Show the comment form, depending on the user's rating.
+			showCommentForm {
+				ratedUseful = 0
+				ratedNotUseful = 1
+				ratedUndecided = 1
+			}
+
+			// Show optional fields in the comment form depending on the user's rating.
+			showOptionalFormFields {
+				ratedUseful = 0
+				ratedNotUseful = 1
+				ratedUndecided = 1
+			}
+
+			// Show "Directly ask one of our employees" link depending on the user's rating.
+			showContactLink {
+				ratedUseful = 0
+				ratedNotUseful = 1
+				ratedUndecided = 1
+			}
+
+			// Redirect to the page with defined page ID depending on the user's rating.
+			redirectToPid {
+				ratedUseful =
+				ratedNotUseful =
+				ratedUndecided =
+			}
+		}
+
+		// Settings related to what is shown after the user left a comment.
+		Comment.create {
+			email {
+				// Default comment e-mail sender name and e-mail address which is used if the website user does not
+				// enter their name or e-mail address.
+				defaultSenderEmail =
+				defaultSenderName =
+
+				// The e-mail address which comments are sent to.
+				// Leave this empty if you do not want to receive e-mail for new comments.
+				recipientEmail =
+
+				// Do not send the Email but display its contents.
+				debugMode = 0
+			}
+		}
+	}
+
+	// Set the storage SysFolder's page ID.
+	persistence.storagePid =
+
+	_CSS_DEFAULT_STYLE (
+		#tx-ncusefulpages-rate-forms form {
+			display: inline-block;
+		}
+
+		#tx-ncusefulpages-comment-form label,
+		#tx-ncusefulpages-comment-form input.submit {
+			display: block;
+		}
+
+		#tx-ncusefulpages-comment-form input.submit {
+			margin-top: 1em;
+		}
+
+		#tx-ncusefulpages-rate-forms .robotic,
+		#tx-ncusefulpages-comment-form .robotic {
+			display: none;
+		}
+	)
+}

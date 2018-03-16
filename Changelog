@@ -1,0 +1,160 @@
+
+2017-08-03 1.4.3 Leonie Philine Bitto <leonie@netcreators.nl>
+	* Fixed deprecated TCA configuration.
+
+2017-07-31 1.4.2 Leonie Philine Bitto <leonie@netcreators.nl>
+	* Changed from traditional to contemporary array syntax.
+
+2017-07-20 1.4.1 Leonie Philine Bitto <leonie@netcreators.nl>
+	* Fixed names - got missing while migrating to TYPO3 7.6 LTS.
+	
+2017-03-13 1.4.0 Tania Morales <extensions@netcreators.nl>
+	* Compatibility for 7.6
+
+2016-09-27 1.3.0 Leonie Philine Bitto <leonie@netcreators.nl>
+	* Completing robotest implementation in Fluid.
+	* Cherry-picked Maastricht template modifications (moving into site-specific configuration) into Master.
+
+2016-09-27 1.2.0 Leonie Philine Bitto <leonie@netcreators.nl>
+	* Cherry-picked modifications from Maastricht branch (based on an obsolete version) into Master.
+
+2015-04-16 1.1.1 Leonie Philine Bitto <leonie@netcreators.nl>
+	* This version includes Emile Blume's modifications of the Comment form for HTML validity.
+	* Modified templates
+			- Resources/Private/Templates/Page/Rated.html
+			- Resources/Private/Templates/Comment/Create.html
+		so that for ratings which offer a comment form, the "thank you" message will only be shown after the form has
+		been submitted.
+
+2015-03-02 1.1.0 Leonie Philine Bitto <leonie@netcreators.nl>
+	* Changed to new-style TCA definition.
+	* Added (slightly incomplete) language labels for DE and FR.
+
+2014-06-18 1.0.1 Leonie Philine Bitto <leonie@netcreators.nl>
+	* Updated extension icon for new Netcreators CI.
+
+2014-06-18 1.0.0 Leonie Philine Bitto <leonie@netcreators.nl>
+	* Version for TYPO3 6.2.
+
+2014-06-12 0.6.2 Gautam Kok <gautam@netcreators.nl>
+    * Replaced t3lib_htmlmail by Swift mailer for TYPO3 6.1 compatibility.
+    * Added change to the ChangeLog.
+    * Incremented revision number to 0.6.2.
+        * (I skipped 0.6.1 due to fixes of introduced bugs in that version).
+
+2013-06-12 0.6.0 Leonie Philine Bitto <leonie@netcreators.nl>
+	* Added a third choice "This is not what I was looking for", with optional feedback form.
+	* The user's rating is now stored with the user's comment and included in the feedback email.
+	* Incremented minor version number to 0.6.0.
+
+2013-03-07 0.5.2 Leonie Philine Bitto <leonie@netcreators.nl>
+	* Fixed TCA->locallang_db.xml link for comments, so the comments table will have a title.
+	* Improved clarity of page ratings and comments table titles.
+	* Added change to the ChangeLog.
+	* Incremented revision number to 0.5.2.
+
+2013-03-05 0.5.1 Leonie Philine Bitto <leonie@netcreators.nl>
+	* Fixed TypoScript setup: comment e-mail settings had slipped into the PageController::ratedAction namespace.
+		Should be in the CommentController::createAction namespace.
+	* Changed comment e-mail: Now the author's name and e-mail address as well as the Page URL are included in the body.
+	* Added validity checks for comment author and recipient e-mail addresses.
+	* Changed comment form: Labels for name and e-mail fields no longer enclose the referenced text field.
+	* Added change to the ChangeLog.
+	* Incremented revision number to 0.5.1.
+
+2013-03-05 0.5.0 Leonie Philine Bitto <leonie@netcreators.nl>
+	* Added the fields 'name' and 'e-mail' to the comment form. If set, then these fields are used as sender name and
+		e-mail address in the comment e-mail to the customer.
+	* Added change to the ChangeLog.
+	* Incremented minor version number to 0.5.0.
+
+2013-03-05 0.4.0 Leonie Philine Bitto <leonie@netcreators.nl>
+	* The plugin now distinguishes not only between pages identified by page ID, but instead takes 3rd party plugin
+		parameters into account, keeping separate ratings for any given set of plugin parameters.
+
+		NOTE I:
+
+		ncgov_permits is not a good citizen in this respect, as it sends a 'Location' header resulting in a HTTP
+		code 302 'Found' redirect, IF there are any _POST parameters set, regardless of if these parameters are within
+		its own plugin controller argument namespace or not. This means that script execution is halted before the
+		controller action code of other plugins on the page - e.g. of nc_usefulpages - are called. Furthermore, for the
+		redirect, it builds a 'link to controller' URL which only takes its own parameters, but no 3rd party parameters
+		into account. Therefore, nc_usefulpages' PageController::rateAction is never even called.
+
+		@see tx_ncgovpermits_controller::getView() and tx_ncgovpermits_controller::getViewAll().
+
+		NOTE II:
+
+		We do NOT forward or store any $_POST parameters, since this could mean sending emails, ordering products
+		or making appointments in other plugins *twice* or at least creating errors.
+
+		This means that if e.g. you find the search results for a certain search term useful, then the search term will
+		only be registered and a separate page rating for each search term created, if the search is using GET instead
+		of POST to send its form data.
+
+		The same applies to the view being shown after the 'Useful' or 'Not useful' button has been clicked:
+		Only if e.g. a search form has been submitted using the GET method, the same search results will be shown after
+		the rating has been saved. If the POST method is used, an empty search form is shown.
+
+		If wished for by a client then we *could*, however, think about creating a 'white list' of allowed, harmless
+		$_POST parameters to forward.
+
+	* Made PageController::indexAction() non-cacheable, since it needs to flexibly hold different sets of third-party
+		parameters.
+	* Removed useless custom FormViewHelper.
+	* Removed Page Domain Model TCA labels for context sensitive help, as they did not add any further information.
+	* Added change to the ChangeLog.
+	* Incremented minor version number to 0.4.0.
+
+2013-03-01 0.3.2 Leonie Philine Bitto <leonie@netcreators.nl>
+	* Changed CommentForm submit button CSS class from "submit-button" to "submit" to match Emile's defaults.
+	* Fixed typo in Dutch language label LLL:Page.rate.addComment.
+	* Added change to the ChangeLog.
+	* Incremented revision number to 0.3.2.
+
+2013-03-01 0.3.1 Leonie Philine Bitto <leonie@netcreators.nl>
+	* Added flash messages to Rated view template to allow flash message for 'invalid form data' rejection to be shown.
+	* Added change to the ChangeLog.
+	* Incremented minor version number to 0.3.1.
+
+2013-02-28 0.3.0 Leonie Philine Bitto <leonie@netcreators.nl>
+	* Implemented feedback form which is displayed when a user clicks the 'Not Useful' button.
+	* Separated rateAction from ratedAction to allow feedback-form-validation without re-rating the page.
+
+2013-02-27 0.2.2 Leonie Philine Bitto <leonie@netcreators.nl>
+	* Changed condition logic to request employee contact to depend on user rating.
+	* Kept condition logic for settings.rated.showBackLink, since actually this back link is useless and could just be
+		hidden.
+	* Added change to the ChangeLog
+	* Incremented revision number to 0.2.2.
+
+2013-02-27 0.2.1 Leonie Philine Bitto <leonie@netcreators.nl>
+	* Added 'nl' locallang key and made 'en' the new 'default'.
+	* Added change to the ChangeLog
+	* Incremented revision number to 0.2.1.
+
+2013-02-27 0.2.0 Leonie Philine Bitto <leonie@netcreators.nl>
+	* Removed kickstarter cruft.
+	* Removed template cruft.
+	* Removed code cruft.
+	* Rewrote most of the controller code for clarity and maintainability.
+	* Made templates localized.
+	* Added Dutch and English translation.
+	* Fixed BUGFIX of 0.1.3 below, which actually produced a fatal error.
+	* Made rating action non-cacheable, since ratings were not saved and 'go back' links referred to wrong pages.
+	* Incremented version number to 0.2.0.
+	* Noted changes in the ChangeLog.
+
+2012-01-25 0.1.3 Choong Wei Tjeng <extensions@netcreators.nl>
+	* BUGFIX: create page record if non existing
+
+2012-01-11 0.1.2 Choong Wei Tjeng <extensions@netcreators.nl>
+
+	* BUGFIX: new extbase versions only work correctly with DI, otherwise updating the repository would fail.
+
+2012-07-30 0.1.1 Frans van der Veen <extensions@netcreators.nl>
+
+	* fixed compatibility with typo3 versions > 4.5
+	* changed version number to reflect changes
+	* added changes to changelog
+	* added changelog

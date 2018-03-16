@@ -1,0 +1,32 @@
+<div id="tx-ncusefulpages-comment-form">
+
+    <f:render partial="FormErrors" />
+
+    <f:form action="create" controller="Comment" section="tx-ncusefulpages-pi1" objectName="{objectName}" object="{object}" arguments="{page: page}" method="POST" additionalParams="{thirdPartyParameters}">
+        <fieldset>
+            <legend class="heading"><f:translate key="Page.rate.addComment.{ratingAsLowerCamelCaseString}" /></legend>
+            <f:form.hidden property="rating" value="{rating}" />
+            <ul>
+                <li>
+                    <label for="tx-ncusefulpages-content" class="hidden"><f:translate key="Comment.form.content" /></label>
+                    <f:form.textarea property="content" id="tx-ncusefulpages-content" rows="8" cols="46" />
+                    <span class="tx_ncusefulpages-comment-form-contactDataOptional"><f:translate key="Comment.form.contactDataOptional" /></span>
+                </li>
+                <li>
+                    <label for="tx-ncusefulpages-authorName"><f:translate key="Comment.form.authorName" />:</label>
+                    <f:form.textfield property="authorName" id="tx-ncusefulpages-authorName" maxlength="255" />
+                </li>
+                <li>
+                    <label for="tx-ncusefulpages-authorEmail"><f:translate key="Comment.form.authorEmail" />:</label>
+                    <f:form.textfield property="authorEmail" id="tx-ncusefulpages-authorEmail" maxlength="255" />
+                </li>
+            </ul>
+            <p class="robotic" id="honeypot-comment">
+                <label for="robotest-comment">If you're human leave this blank:</label>
+                <input name="robotest" type="text" id="robotest-comment" class="robotest" />
+            </p>
+            <f:form.submit class="submit" value="{f:translate(key: 'Comment.form.submit', default: '[submit]')}" />
+        </fieldset>
+    </f:form>
+
+</div>
